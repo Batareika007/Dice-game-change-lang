@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dice game</title>
+</head>
+<body>
+
+    
+    <main>
+        <ul class="leng_list">
+            <li><button id="english">English</button></li>
+            <li><button id="russia">Русский</button></li>
+            <li><button id="hebrew">עברית</button></li>
+        </ul>
+        <h1>The Dice Games</h1>
+        <section class="game-container">
+            <div class="game-container__item">
+                <h2 class="player1">
+                    player one
+                </h2>
+                <div class="dice6" id="player1">
+                    <div class="dice_dot1 dice_dot"></div>
+                    <div class="dice_dot2 dice_dot" ></div>
+                    <div class="dice_dot3 dice_dot" ></div>
+                    <div class="dice_dot4 dice_dot" ></div>
+                    <div class="dice_dot5 dice_dot" ></div>
+                    <div class="dice_dot6 dice_dot" ></div>
+                </div>
+            </div>
+            <div class="game-container__item">
+                <h2 class="player2">
+                    player two
+                </h2>
+                <div class="dice6" id="player2">
+                    <div class="dice_dot1 dice_dot"></div>
+                    <div class="dice_dot2 dice_dot"></div>
+                    <div class="dice_dot3 dice_dot"></div>
+                    <div class="dice_dot4 dice_dot"></div>
+                    <div class="dice_dot5 dice_dot"></div>
+                    <div class="dice_dot6 dice_dot"></div>
+                </div>
+            </div>
+        </section>
+        <h3 id="result"> Push the button to start </h3>
+        <button id="btn">roll the dice</button>
+    </main>
+        
+    <script src="script.js"></script>
+</body>
+</html>
