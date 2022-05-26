@@ -17,24 +17,58 @@ function start_game() {
     player2.classList.remove(player2.classList[0]);
     player2.classList.add(player2_dice);
     if (player1_dice > player2_dice) {
-        console.log("Player One wins");
-        document.querySelector("#result").textContent = "Player One wins";
+
+        if (leng === 'rus') {
+            console.log("Первый Игрок Выиграл");
+            document.querySelector("#result").textContent = "Первый Игрок Выиграл";
+        } else if (leng === 'heb') {
+            console.log("שחקן ראשון ניצח");
+            document.querySelector("#result").textContent = "שחקן ראשון ניצח";
+        } else {
+            console.log("Player One wins");
+            document.querySelector("#result").textContent = "Player One wins";
+        }
+
     } else if (player1_dice < player2_dice) {
-        document.querySelector("#result").textContent = "Player Two wins";
-        console.log("Player Two wins");
+
+        if (leng === 'rus') {
+            console.log("Второй Игрок Выиграл");
+            document.querySelector("#result").textContent = "Второй Игрок Выиграл";
+        } else if (leng === 'heb') {
+            console.log("שחקן שני ניצח");
+            document.querySelector("#result").textContent = "שחקן שני ניצח";
+        } else
+
+        {
+            console.log("Player Two wins");
+            document.querySelector("#result").textContent = "Player Two wins";
+        }
     } else {
-        document.querySelector("#result").textContent = "It's Draw";
-        console.log("it's a draw")
+
+        if (leng === 'rus') {
+            console.log("Ничья")
+            document.querySelector("#result").textContent = "Ничья";
+        } else if (leng === 'heb') {
+            console.log("תיקו")
+            document.querySelector("#result").textContent = "תיקו";
+
+        } else {
+            console.log("it's a draw")
+            document.querySelector("#result").textContent = "It's Draw";
+        }
     }
     console.log("player1: " + player1_dice);
     console.log("player2: " + player2_dice);
 }
 
-// change lang
 
+// change lang
+let leng = ''
 
 document.getElementById("russia").addEventListener("click", russian_leng);
+
 function russian_leng() {
+    leng = 'rus';
     document.querySelector(".player1").textContent = "Первый игрок";
     document.querySelector(".player2").textContent = "Второй игрок";
     document.querySelector("h1").textContent = "Игра в кости";
@@ -43,7 +77,9 @@ function russian_leng() {
 }
 
 document.getElementById("english").addEventListener("click", english_leng);
+
 function english_leng() {
+    leng = 'eng';
     document.querySelector(".player1").textContent = "Player One";
     document.querySelector(".player2").textContent = "Player Two";
     document.querySelector("h1").textContent = "The Dice Games";
@@ -52,7 +88,9 @@ function english_leng() {
 }
 
 document.getElementById("hebrew").addEventListener("click", hebrew_leng);
+
 function hebrew_leng() {
+    leng = 'heb';
     document.querySelector(".player1").textContent = "שחקן ראשון";
     document.querySelector(".player2").textContent = "שחקן שני";
     document.querySelector("h1").textContent = "משחק הקוביות";
